@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Format Validation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <form id="emailForm">
+        <input type="text" id="email" placeholder="Enter your email">
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        $(document).ready(function(){
+            $("#emailForm").submit(function(e){
+                var email = $("#email").val();
+                var regex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+                if (!regex.test(email)) {
+                    alert("Please enter a valid email address.");
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

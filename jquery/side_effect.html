@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide Effect</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button id="toggleMenu">Toggle Menu</button>
+    <div id="menu" style="display:none;">This is a collapsible menu.</div>
+    <script>
+        $(document).ready(function(){
+            $("#toggleMenu").click(function(){
+                $("#menu").slideToggle();
+            });
+        });
+    </script>
+</body>
+</html>

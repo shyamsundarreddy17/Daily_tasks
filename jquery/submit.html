@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit Data with AJAX</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <form id="ajaxForm">
+        <input type="text" name="name" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="response"></div>
+    <script>
+        $(document).ready(function(){
+            $("#ajaxForm").submit(function(e){
+                e.preventDefault();
+                var name = $("input[name='name']").val();
+                $.post("https://httpbin.org/post", { name: name }, function(response){
+                    $("#response").text("Submitted name: " + response.form.name);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

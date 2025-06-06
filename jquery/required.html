@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Required Field Validation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <form id="requiredForm">
+        <input type="text" id="nameField" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        $(document).ready(function(){
+            $("#requiredForm").submit(function(e){
+                if ($("#nameField").val().trim() === "") {
+                    alert("Name is required!");
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

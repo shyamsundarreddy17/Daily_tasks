@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fade Effect</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <img id="myImage" src="https://via.placeholder.com/150" alt="Sample Image">
+    <button id="fadeBtn">Fade Out</button>
+    <script>
+        $(document).ready(function(){
+            $("#fadeBtn").click(function(){
+                $("#myImage").fadeOut();
+            });
+        });
+    </script>
+</body>
+</html>

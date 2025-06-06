@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch API Data</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="apiResult">Loading...</div>
+    <script>
+        $(document).ready(function(){
+            $.get("https://api.publicapis.org/entries", function(data){
+                $("#apiResult").text("Total APIs: " + data.count);
+            });
+        });
+    </script>
+</body>
+</html>
+

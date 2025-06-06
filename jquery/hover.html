@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mouse Hover Effect</title>
+</head>
+<body>
+  <p id="hoverText">Hover over me!</p>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#hoverText").hover(
+        function() {
+          $(this).text("You're hovering!");
+        },
+        function() {
+          $(this).text("Hover over me!");
+        }
+      );
+    });
+  </script>
+</body>
+</html>
+
+

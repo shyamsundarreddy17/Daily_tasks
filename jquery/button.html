@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Button</title>
+</head>
+<body>
+  <button id="changeTextBtn">Change Text</button>
+  <p id="textToChange">Original text</p>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#changeTextBtn").click(function() {
+        $("#textToChange").text("New text after button click!");
+      });
+    });
+  </script>
+</body>
+</html>
+
+

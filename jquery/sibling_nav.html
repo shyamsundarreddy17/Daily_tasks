@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sibling Navigation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p id="firstPara">This is the first paragraph.</p>
+    <p>This is the next sibling.</p>
+    <script>
+        $(document).ready(function(){
+            $("#firstPara").next().css("font-weight", "bold");
+        });
+    </script>
+</body>
+</html>
