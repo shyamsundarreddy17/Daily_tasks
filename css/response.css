@@ -1,0 +1,36 @@
+
+.pricing-table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 10px solid burlywood;
+  border-radius: 5px;
+  margin:15px;
+  /* flex-direction: column; */
+
+}
+
+.plan {
+  background-color: #f7f7f7;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: calc(33.33% - 40px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .plan {
+    width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .plan {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+

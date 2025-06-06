@@ -1,0 +1,10 @@
+.col-9{
+    color: red;
+    border: solid ;
+    border-color: blue;
+}
+.col-3{
+    color: blue;
+    border: solid ;
+    border-color: yellow;
+}
